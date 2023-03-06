@@ -12,3 +12,4 @@
 - [ ] expose validators functions
 - [ ] implement tests for all validators (right and wrong situations)
 - [ ] implement performance tests
+- [ ] prepare for javadoc
