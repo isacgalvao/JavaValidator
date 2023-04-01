@@ -7,7 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface IsISO8601 {
-    boolean strict() default true;
+public @interface IsISSN {
+    boolean require_hyphen() default false;
+    boolean case_sensitive() default false;
 }
 

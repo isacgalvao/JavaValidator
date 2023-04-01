@@ -76,6 +76,11 @@ public class AnnotationValidatorBuilder {
         validators.put(IsIP.class, new IsIPValidator());
         validators.put(IsISBN.class, new IsISBNValidator());
         validators.put(IsISIN.class, new IsISINValidator());
+        validators.put(IsISO31661Alpha3.class, new IsISO31661Alpha3Validator());
+        validators.put(IsISRC.class, new IsISRCValidator());
+        validators.put(IsISSN.class, new IsISSNValidator());
+        validators.put(IsJWT.class, new IsJWTValidator());
+        validators.put(IsLocale.class, new IsLocaleValidator());
 
         return validators;
     }
