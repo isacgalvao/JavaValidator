@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 
 /**
  * Check if the string is a ISRC.
- * If given value is not a string, then it returns false.
  * <a href="https://isrc.ifpi.org/en/isrc-standard/structure">see more</a>
  */
 public class IsISRCValidator implements AnnotationValidatorInterface<IsISRC> {

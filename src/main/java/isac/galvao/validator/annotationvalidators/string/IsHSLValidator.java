@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
 /**
  * Check if the string is an HSL (hue, saturation, lightness, optional alpha) color based on CSS Colors Level 4 specification.<p>
  * Comma-separated format supported. Space-separated format supported except a few edge cases (ex: hsl(200grad+.1%62%/1)).<p>
- * If given value is not a string, then it returns false.
  */
 public class IsHSLValidator implements AnnotationValidatorInterface<IsHSL> {
 

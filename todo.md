@@ -13,3 +13,6 @@
 - [ ] implement performance tests
 - [ ] prepare for javadoc
 - [ ] refactor code to implement newer java syntax
+- [ ] mudar os atributos das anotacoes para camelCase
+- [ ] merge dos locale
+- [ ] tirar os pattern dos hashmap e colocar string ao invés

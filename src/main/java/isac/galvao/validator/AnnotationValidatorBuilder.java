@@ -81,6 +81,14 @@ public class AnnotationValidatorBuilder {
         validators.put(IsISSN.class, new IsISSNValidator());
         validators.put(IsJWT.class, new IsJWTValidator());
         validators.put(IsLocale.class, new IsLocaleValidator());
+        validators.put(IsLowercase.class, new IsLowercaseValidator());
+        validators.put(IsMacAddress.class, new IsMacAddressValidator());
+        validators.put(IsMagnetURI.class, new IsMagnetURIValidator());
+        validators.put(IsMilitaryTime.class, new IsMilitaryTimeValidator());
+        validators.put(IsMimeType.class, new IsMimeTypeValidator());
+        validators.put(IsMobilePhone.class, new IsMobilePhoneValidator());
+        validators.put(IsMongoId.class, new IsMongoIdValidator());
+        validators.put(IsMultibyte.class, new IsMultibyteValidator());
 
         return validators;
     }

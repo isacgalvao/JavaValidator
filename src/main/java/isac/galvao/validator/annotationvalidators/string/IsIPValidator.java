@@ -11,12 +11,12 @@ import java.util.regex.Pattern;
 
 public class IsIPValidator implements AnnotationValidatorInterface<IsIP> {
 
-    final String IPv4SegmentFormat = "(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])";
-    final String IPv4AddressFormat = "(%s[.]){3}%s".formatted(IPv4SegmentFormat, IPv4SegmentFormat);
-    final Pattern IPv4AddressRegExp = Pattern.compile("^%s$".formatted(IPv4AddressFormat));
+    private final String IPv4SegmentFormat = "(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])";
+    private final String IPv4AddressFormat = "(%s[.]){3}%s".formatted(IPv4SegmentFormat, IPv4SegmentFormat);
+    private final Pattern IPv4AddressRegExp = Pattern.compile("^%s$".formatted(IPv4AddressFormat));
 
-    final String IPv6SegmentFormat = "(?:[0-9a-fA-F]{1,4})";
-    final Pattern IPv6AddressRegExp = Pattern.compile("^(" +
+    private final String IPv6SegmentFormat = "(?:[0-9a-fA-F]{1,4})";
+    private final Pattern IPv6AddressRegExp = Pattern.compile("^(" +
             "(?:" + IPv6SegmentFormat + ":){7}(?:" + IPv6SegmentFormat + "|:)|" +
             "(?:" + IPv6SegmentFormat + ":){6}(?:" + IPv4AddressFormat + "|:" + IPv6SegmentFormat + "|:)|" +
             "(?:" + IPv6SegmentFormat + ":){5}(?::" + IPv4AddressFormat + "|(:" + IPv6SegmentFormat + "){1,2}|:)|" +

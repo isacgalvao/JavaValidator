@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 
 /**
  * Checks if the string is an ISSN.
- * If given value is not a string, then it returns false.
  */
 public class IsISSNValidator implements AnnotationValidatorInterface<IsISSN> {
 
