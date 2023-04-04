@@ -1,12 +1,20 @@
 package isac.galvao.validator;
 
-import isac.galvao.validator.annotations.array.*;
+import isac.galvao.validator.annotations.array.ArrayMaxSize;
+import isac.galvao.validator.annotations.array.ArrayMinSize;
+import isac.galvao.validator.annotations.array.ArrayNotEmpty;
+import isac.galvao.validator.annotations.array.ArrayUnique;
 import isac.galvao.validator.annotations.common.*;
-import isac.galvao.validator.annotations.date.*;
+import isac.galvao.validator.annotations.date.MaxDate;
+import isac.galvao.validator.annotations.date.MinDate;
 import isac.galvao.validator.annotations.string.*;
-import isac.galvao.validator.annotationvalidators.array.*;
+import isac.galvao.validator.annotationvalidators.array.ArrayMaxSizeValidator;
+import isac.galvao.validator.annotationvalidators.array.ArrayMinSizeValidator;
+import isac.galvao.validator.annotationvalidators.array.ArrayNotEmptyValidator;
+import isac.galvao.validator.annotationvalidators.array.ArrayUniqueValidator;
 import isac.galvao.validator.annotationvalidators.common.*;
-import isac.galvao.validator.annotationvalidators.date.*;
+import isac.galvao.validator.annotationvalidators.date.MaxDateValidator;
+import isac.galvao.validator.annotationvalidators.date.MinDateValidator;
 import isac.galvao.validator.annotationvalidators.string.*;
 import isac.galvao.validator.interfaces.AnnotationValidatorInterface;
 
@@ -89,6 +97,21 @@ public class AnnotationValidatorBuilder {
         validators.put(IsMobilePhone.class, new IsMobilePhoneValidator());
         validators.put(IsMongoId.class, new IsMongoIdValidator());
         validators.put(IsMultibyte.class, new IsMultibyteValidator());
+        validators.put(IsNumberString.class, new IsNumberStringValidator());
+        validators.put(IsOctal.class, new IsOctalValidator());
+        validators.put(IsPassportNumber.class, new IsPassportNumberValidator());
+        validators.put(IsPort.class, new IsPortValidator());
+        validators.put(IsPostalCode.class, new IsPostalCodeValidator());
+        validators.put(IsRFC3339.class, new IsRFC3339Validator());
+        validators.put(IsRgbColor.class, new IsRgbColorValidator());
+        validators.put(IsSemVer.class, new IsSemVerValidator());
+        validators.put(IsStrongPassword.class, new IsStrongPasswordValidator());
+        validators.put(IsSurrogatePair.class, new IsSurrogatePairValidator());
+        // validators.put(IsTaxID.class, new IsTaxIDValidator());
+        validators.put(IsTimeZone.class, new IsTimeZoneValidator());
+        validators.put(IsUppercase.class, new IsUppercaseValidator());
+        validators.put(IsUUID.class, new IsUUIDValidator());
+        //validators.put(__IsUrl.class, new __IsUrlValidator());
 
         return validators;
     }

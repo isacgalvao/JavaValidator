@@ -71,11 +71,11 @@ public enum LocaleAlpha {
     uk_UA("^[А-ЩЬЮЯЄIЇҐі]+$", Pattern.compile("^[А-ЩЬЮЯЄIЇҐі]+$", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE)),
     vi_VN("^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴĐÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸ]+$", Pattern.compile("^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴĐÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸ]+$", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE));
 
-    final String regex;
+    private final String regex;
 
-    final Pattern pattern;
+    private final Pattern pattern;
 
-    LocaleAlpha(String regex, Pattern pattern) {
+    LocaleAlpha(final String regex, final Pattern pattern) {
         this.pattern = pattern;
         this.regex = regex;
     }

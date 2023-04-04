@@ -61,9 +61,9 @@ public enum LocaleDecimal {
     uk_UA(","),
     vi_VN(",");
 
-    final String value;
+    private final String value;
 
-    LocaleDecimal(String value) {
+    LocaleDecimal(final String value) {
         this.value = value;
     }
 

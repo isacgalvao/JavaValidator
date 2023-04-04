@@ -90,10 +90,10 @@ public enum LocaleAlphanumeric {
             Pattern.compile("^[0-9A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴĐÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸ]+$",
                     Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE));
 
-    final String regex;
-    final Pattern pattern;
+    private final String regex;
+    private final Pattern pattern;
 
-    LocaleAlphanumeric(String regex, Pattern pattern) {
+    LocaleAlphanumeric(final String regex, final Pattern pattern) {
         this.regex = regex;
         this.pattern = pattern;
     }

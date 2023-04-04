@@ -16,3 +16,5 @@
 - [ ] mudar os atributos das anotacoes para camelCase
 - [ ] merge dos locale
 - [ ] tirar os pattern dos hashmap e colocar string ao invés
+- [ ] usar o locale nativo java
+- [ ] encontrar uma alternativa para o builder dos validators
