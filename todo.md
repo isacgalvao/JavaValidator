@@ -18,3 +18,6 @@
 - [ ] tirar os pattern dos hashmap e colocar string ao invés
 - [ ] usar o locale nativo java
 - [ ] encontrar uma alternativa para o builder dos validators
+- [ ] padronizar os atributos para camelCase
+- [ ] criar uma api fluent, ex: ValidatorBuilder.new().isIn({""}).build().validate(obj)
+- [ ] implementar orientado a objeto, ex: new Length(1, 2).validate(obj)

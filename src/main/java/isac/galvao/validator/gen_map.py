@@ -1,7 +1,7 @@
 from os import listdir, rename
 
 annotations_dir = 'annotations/string'
-validators_dir = 'annotationvalidators/string'
+validators_dir = 'validators/string'
 
 annotation_files = [i for i in listdir(
     annotations_dir) if not i.startswith("__")]

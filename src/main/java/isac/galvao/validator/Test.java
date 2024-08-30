@@ -1,18 +1,15 @@
 package isac.galvao.validator;
 
-import isac.galvao.validator.annotations.string.IsSurrogatePair;
-import isac.galvao.validator.annotations.string.IsTimeZone;
-import isac.galvao.validator.annotations.string.IsUUID;
-import isac.galvao.validator.annotations.string.IsUppercase;
-import isac.galvao.validator.enums.UUIDVersion;
+import isac.galvao.validator.annotations.common.ValidateNested;
+import isac.galvao.validator.annotations.string.*;
 import isac.galvao.validator.interfaces.Validator;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class Test {
-
-
-    public String data = "A987FBC9-4BED-2078-CF07-9141BA07C9F3";
+    @NotContains(value = "teucu", ignoreCase = true)
+    public String data = "Teucu";
 
     public static void main(String[] args) {
         Test testObj = new Test();

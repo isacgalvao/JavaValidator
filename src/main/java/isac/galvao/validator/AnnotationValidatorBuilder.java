@@ -8,14 +8,14 @@ import isac.galvao.validator.annotations.common.*;
 import isac.galvao.validator.annotations.date.MaxDate;
 import isac.galvao.validator.annotations.date.MinDate;
 import isac.galvao.validator.annotations.string.*;
-import isac.galvao.validator.annotationvalidators.array.ArrayMaxSizeValidator;
-import isac.galvao.validator.annotationvalidators.array.ArrayMinSizeValidator;
-import isac.galvao.validator.annotationvalidators.array.ArrayNotEmptyValidator;
-import isac.galvao.validator.annotationvalidators.array.ArrayUniqueValidator;
-import isac.galvao.validator.annotationvalidators.common.*;
-import isac.galvao.validator.annotationvalidators.date.MaxDateValidator;
-import isac.galvao.validator.annotationvalidators.date.MinDateValidator;
-import isac.galvao.validator.annotationvalidators.string.*;
+import isac.galvao.validator.validators.array.ArrayMaxSizeValidator;
+import isac.galvao.validator.validators.array.ArrayMinSizeValidator;
+import isac.galvao.validator.validators.array.ArrayNotEmptyValidator;
+import isac.galvao.validator.validators.array.ArrayUniqueValidator;
+import isac.galvao.validator.validators.common.*;
+import isac.galvao.validator.validators.date.MaxDateValidator;
+import isac.galvao.validator.validators.date.MinDateValidator;
+import isac.galvao.validator.validators.string.*;
 import isac.galvao.validator.interfaces.AnnotationValidatorInterface;
 
 import java.lang.annotation.Annotation;
@@ -112,6 +112,10 @@ public class AnnotationValidatorBuilder {
         validators.put(IsUppercase.class, new IsUppercaseValidator());
         validators.put(IsUUID.class, new IsUUIDValidator());
         //validators.put(__IsUrl.class, new __IsUrlValidator());
+        validators.put(Matches.class, new MatchesValidator());
+        validators.put(MaxLength.class, new MaxLengthValidator());
+        validators.put(MinLength.class, new MinLengthValidator());
+        validators.put(NotContains.class, new NotContainsValidator());
 
         return validators;
     }

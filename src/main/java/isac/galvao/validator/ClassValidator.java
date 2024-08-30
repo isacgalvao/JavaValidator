@@ -1,21 +1,18 @@
 package isac.galvao.validator;
 
 import isac.galvao.validator.annotations.common.IsOptional;
+import isac.galvao.validator.annotations.common.ValidateNested;
 import isac.galvao.validator.interfaces.AnnotationValidatorInterface;
 import isac.galvao.validator.interfaces.Validator;
-import isac.galvao.validator.util.ClassIdentifier;
 import isac.galvao.validator.util.FieldHelper;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 /**
- * Esta lib realiza a validação de classes por meio de anotações.
- * Inspirada pela lib typescript 'class-validator'.
+ * Realiza a validação dos atributos de uma classe por meio de anotações.
+ * Inspirada na lib typescript 'class-validator'.
  *
  * @author Isac Galvão
  * @version 1.0
@@ -78,15 +75,16 @@ public class ClassValidator implements Validator {
             }
             errors.addAll(fieldErros);
 
-            try {
+            if (Objects.nonNull(field.getAnnotation(ValidateNested.class))) {
                 /*
-                 * Inicia uma recursão caso haja uma classe aninhada que possua anotações desta lib
+                 * Realiza a validação da classe aninhada caso ela esteja anotada com ValidateNested
                  */
-                field.setAccessible(true);
-                if (!ClassIdentifier.isJavaLang(field.get(obj)))
+                try {
+                    field.setAccessible(true);
                     errors.addAll(execute(field.get(obj), field.getName()));
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException(e);
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
         return errors;
